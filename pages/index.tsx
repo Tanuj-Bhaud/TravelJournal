@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Navbar from '../components/navbar'
-import Hsection from '../components/hsection'
+import Navbar from '../components/Navbar'
+import HeroSection from '../components/HeroSection'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
 
       <main>
         <Navbar />
-        <Hsection />
+        <HeroSection />
       </main>
     </div>
   )
