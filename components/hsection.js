@@ -1,26 +1,28 @@
-import React from "react";
-import travelData from "../Data/travelData.js";
-import Card from "./card.js";
+import React from 'react'
+import travelData from '../Data/travelData.js'
+import Card from './card.js'
 
 export default function Hsection() {
-  const travelDatalist = travelData.map(travel => {
-    return <Card
-    title={travel.title}
-    location={travel.location}
-    googleMapsUrl={travel.googleMapsUrl}
-    startDate={travel.startDate}
-    endDate={travel.endDate}
-    description={travel.description}
-    imageUrl={travel.imageUrl}
-
-     />
-})
+  const travelDatalist = travelData.map((travel) => {
+    return (
+      <Card
+        title={travel.title}
+        location={travel.location}
+        googleMapsUrl={travel.googleMapsUrl}
+        startDate={travel.startDate}
+        endDate={travel.endDate}
+        description={travel.description}
+        imageUrl={travel.imageUrl}
+      />
+    )
+  })
   return (
-      <><section className="text-gray-600 body-font overflow-hidden">
-      <div className="container  py-24 mx-auto">
-        <div className="my-8 divide-y-2 divide-gray-100">
-          {travelDatalist}
-           {/* a
+    <>
+      <section className="body-font overflow-hidden text-gray-600">
+        <div className="container  mx-auto py-24">
+          <div className="my-8 divide-y-2 divide-gray-100">
+            {travelDatalist}
+            {/* a
           a
           a
           a
@@ -35,7 +37,7 @@ export default function Hsection() {
           Aaa
           a
           /*/}
-          {/* <div className="py-8 flex flex-wrap md:flex-nowrap">
+            {/* <div className="py-8 flex flex-wrap md:flex-nowrap">
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
             
               <img width="200px" height="100px" className="rounded-md" src="https://media.nationalgeographic.org/assets/photos/000/282/28286.jpg" />
@@ -56,7 +58,7 @@ export default function Hsection() {
           
             </div>
           </div> */}
-          {/* a
+            {/* a
           a
           a
           a
@@ -71,7 +73,7 @@ export default function Hsection() {
           Aaa
           a
           /*/}
-          {/* <div className="py-8 flex flex-wrap md:flex-nowrap">
+            {/* <div className="py-8 flex flex-wrap md:flex-nowrap">
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <span className="font-semibold title-font text-gray-700">
                 CATEGORY
@@ -139,9 +141,9 @@ export default function Hsection() {
               </a>
             </div>
           </div> */}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }
