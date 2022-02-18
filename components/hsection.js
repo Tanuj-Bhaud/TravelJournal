@@ -1,15 +1,44 @@
 import React from "react";
 import travelData from "../Data/travelData.js";
+import Card from "./card.js";
 
 export default function Hsection() {
+  const travelDatalist = travelData.map(travel => {
+    return <Card
+    title={travel.title}
+    location={travel.location}
+    googleMapsUrl={travel.googleMapsUrl}
+    startDate={travel.startDate}
+    endDate={travel.endDate}
+    description={travel.description}
+    imageUrl={travel.imageUrl}
+
+     />
+})
   return (
       <><section className="text-gray-600 body-font overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
         <div className="-my-8 divide-y-2 divide-gray-100">
-          <div className="py-8 flex flex-wrap md:flex-nowrap">
+          {travelDatalist}
+           {/* a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          Aaa
+          a
+          /*/}
+          {/* <div className="py-8 flex flex-wrap md:flex-nowrap">
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
             
-              <img className="rounded-md" src="https://media.nationalgeographic.org/assets/photos/000/282/28286.jpg" />
+              <img width="200px" height="100px" className="rounded-md" src="https://media.nationalgeographic.org/assets/photos/000/282/28286.jpg" />
           
             </div>
             <div className="md:flex-grow ml-10 mt-6">
@@ -26,7 +55,22 @@ export default function Hsection() {
               </p>
           
             </div>
-          </div>
+          </div> */}
+          {/* a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          a
+          Aaa
+          a
+          /*/}
           {/* <div className="py-8 flex flex-wrap md:flex-nowrap">
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
               <span className="font-semibold title-font text-gray-700">
