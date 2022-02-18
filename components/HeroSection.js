@@ -6,8 +6,8 @@ export default function HeroSection() {
   return (
     <>
       <section className="body-font overflow-hidden text-gray-600">
-        <div className="container  mx-auto py-24">
-          <div className="my-8 divide-y-2 divide-gray-100">
+       
+     <div className="container mx-auto px-5 py-24">
             {travelData.map((travel) => {
               return (
                 <Card
@@ -21,8 +21,8 @@ export default function HeroSection() {
                 />
               )
             })}
-          </div>
-        </div>
+     </div>
+
       </section>
     </>
   )
