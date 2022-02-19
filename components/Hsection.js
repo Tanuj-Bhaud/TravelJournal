@@ -1,6 +1,6 @@
 import React from "react";
 import travelData from "../Data/travelData.js";
-import Card from "./card.js";
+import Card from "./Card.js";
 
 export default function Hsection() {
   const travelDatalist = travelData.map(travel => {
@@ -17,9 +17,10 @@ export default function Hsection() {
 })
   return (
       <><section className="text-gray-600 body-font overflow-hidden">
-      <div className="container  py-24 mx-auto">
+      <div className="container  pt-24 pb-15 mx-auto">
         <div className="my-8 divide-y-2 divide-gray-100">
           {travelDatalist}
+         
         </div>
       </div>
     </section>

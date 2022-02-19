@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Navbar from '../components/navbar'
-import Hsection from '../components/hsection'
+import Navbar from '../components/Navbar'
+import Hsection from '../components/Hsection'
+import Tbutton from '../components/Tbutton'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
 <main className="">  
  <Navbar />
  <Hsection />
+ <Tbutton />
 </main>
 </div>
 )}
