@@ -6,8 +6,8 @@ export default function Card(props) {
         <div>
        <div className="py-8 flex flex-wrap md:flex-nowrap">
             <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-              <div className="w-screen sm:w-[270px] sm:h-[230px] flex itens-center justify-center">
-              <img width="270px" height="270px" className=" rounded-md flex items-center justify center" src={imageUrl} />
+              <div className="w-screen sm:w-[270px] sm:h-[230px]  flex itens-center justify-center">
+              <img width="270px" height="270px" className="sm:ml-20 md:mr-20 rounded-md flex items-center justify center" src={imageUrl} />
               </div>
             </div>
             <div className="md:flex-grow ml-10 mt-6">
