@@ -14,7 +14,7 @@ export default function Home() {
 <main className="">  
  <Navbar />
  <Hsection />
- <Tbutton />
+ {/* <Tbutton /> */}
 </main>
 </div>
 )}
