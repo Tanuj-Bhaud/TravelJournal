@@ -1,25 +1,24 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import travelData from '../Data/travelData'
 
-import Hsection from './Hsection'
-export default function MyModal() {
+
+export default function MyModal({travelData, setTravelData}) {
   let [isOpen, setIsOpen] = useState(false)
 
   function closeModal(event) {
     event.preventDefault()
     setIsOpen(false)
-    travelData.push({
-      title: `${locationState}`,
-      location: `${countryState}`,
-      googleMapsUrl: `${urlState}`,
-      startDate: `${startState}`,
-      endDate: `${endState}`,
-      description: `${descState}`,
-      imageUrl: `${imageState}`,
+    setTravelData((prevState) => { 
+      return [...prevState, {
+        title: locationState,
+        location: countryState,
+        googleMapsUrl: urlState,
+        startDate: startState,
+        endDate: endState,
+        description: descState,
+        imageUrl: imageState,
+      }]
     })
-
-    console.log(travelData)
   }
 
   function openModal() {

@@ -1,20 +1,14 @@
 import React from 'react'
 import MyModal from './ModalFunction'
 
-function Tbutton(props) {
-  const handleClick = () => {
-    return <MyModal />
-  }
+function Tbutton({travelData, setTravelData}) {
+
   return (
-    <div>
-      {' '}
       <div
-        onClick={handleClick}
         className="flex h-20 w-screen items-center justify-center"
       >
-        <MyModal />
+        <MyModal travelData={travelData} setTravelData={setTravelData} />
       </div>
-    </div>
   )
 }
 

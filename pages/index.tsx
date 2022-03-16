@@ -2,10 +2,12 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Hsection from '../components/Hsection'
 import Tbutton from '../components/Tbutton'
-
+import tData from '../Data/travelData'
+import React, {useState} from 'react'
 
 export default function Home() {
-const extraTravels = [{}]
+  const [travelData, setTravelData] = useState(tData)
+  
   return (
     <div className="">
       <Head>
@@ -15,8 +17,8 @@ const extraTravels = [{}]
 
       <main className="">
         <Navbar />
-        <Hsection />
-        <Tbutton moreTravels={extraTravels} />
+        <Hsection travelData={travelData} />
+        <Tbutton travelData={travelData} setTravelData={setTravelData}/>
       </main>
     </div>
   )

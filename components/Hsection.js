@@ -1,13 +1,24 @@
-import React, { useEffect } from 'react'
-import travelData from '../Data/travelData.js'
+import React, { useEffect, useState } from 'react'
+
 import Card from './Card.js'
 
-export default function Hsection() {
-  let travelDataList
-  useEffect(() => {
-    ;() => {
-      travelDataList = travelData.map((travel, index) => {
-        return (
+export default function Hsection({
+  travelData
+}) {
+
+
+  
+
+    
+
+
+
+  return (
+    <>
+      <section className="body-font overflow-hidden text-gray-600">
+        <div className="pb-15  container mx-auto pt-24">
+          <div className="my-8 divide-y-2 divide-gray-100">
+            {travelData.map((travel, index) =>
           <Card
             title={travel.title}
             location={travel.location}
@@ -17,19 +28,8 @@ export default function Hsection() {
             description={travel.description}
             imageUrl={travel.imageUrl}
             key={index}
-          />
-        )
-      })
-    },
-      [travelData]
-  })
-
-  return (
-    <>
-      <section className="body-font overflow-hidden text-gray-600">
-        <div className="pb-15  container mx-auto pt-24">
-          <div className="my-8 divide-y-2 divide-gray-100">
-            {travelDataList}
+          
+          />)}
           </div>
         </div>
       </section>
