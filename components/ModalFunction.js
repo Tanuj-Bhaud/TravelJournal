@@ -1,16 +1,38 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import travelData from '../Data/travelData'
 
+import Hsection from './Hsection'
 export default function MyModal() {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false)
 
-  function closeModal() {
+  function closeModal(event) {
+    event.preventDefault()
     setIsOpen(false)
+    travelData.push({
+      title: `${locationState}`,
+      location: `${countryState}`,
+      googleMapsUrl: `${urlState}`,
+      startDate: `${startState}`,
+      endDate: `${endState}`,
+      description: `${descState}`,
+      imageUrl: `${imageState}`,
+    })
+
+    console.log(travelData)
   }
 
   function openModal() {
     setIsOpen(true)
   }
+
+  const [locationState, setLocationState] = useState('')
+  const [countryState, setCountrystate] = useState('')
+  const [urlState, setUrlState] = useState('')
+  const [startState, setStartState] = useState('')
+  const [endState, setEndState] = useState('')
+  const [descState, setDesState] = useState('')
+  const [imageState, setImageState] = useState('')
 
   return (
     <>
@@ -75,6 +97,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setLocationState(e.target.value)}
+                        value={locationState}
+                        placeholder="Enter Location"
                       />
                     </label>
                     <label className="my-2 block" htmlFor="name">
@@ -84,6 +109,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setCountrystate(e.target.value)}
+                        value={countryState}
+                        placeholder="Enter Country"
                       />
                     </label>
                     <label className="my-2 block" htmlFor="name">
@@ -93,6 +121,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setUrlState(e.target.value)}
+                        value={urlState}
+                        placeholder="Enter GPS Url"
                       />
                     </label>
                     <label className="my-2 block" htmlFor="name">
@@ -102,6 +133,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setStartState(e.target.value)}
+                        value={startState}
+                        placeholder="Enter Start Date"
                       />
                     </label>
                     <label className="my-2 block" htmlFor="name">
@@ -111,6 +145,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setEndState(e.target.value)}
+                        value={endState}
+                        placeholder="Enter End Date"
                       />
                     </label>
                     <label className="my-2 block" htmlFor="name">
@@ -120,6 +157,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setDesState(e.target.value)}
+                        value={descState}
+                        placeholder="Enter description"
                       />
                     </label>
                     <label className="my-2 block" htmlFor="name">
@@ -129,6 +169,9 @@ export default function MyModal() {
                         id="name"
                         type="text"
                         name="name"
+                        onChange={(e) => setImageState(e.target.value)}
+                        value={imageState}
+                        placeholder="Enter Image"
                       />
                     </label>
 

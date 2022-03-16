@@ -1,7 +1,7 @@
 import React from 'react'
 import MyModal from './ModalFunction'
 
-function Tbutton() {
+function Tbutton(props) {
   const handleClick = () => {
     return <MyModal />
   }
@@ -12,7 +12,7 @@ function Tbutton() {
         onClick={handleClick}
         className="flex h-20 w-screen items-center justify-center"
       >
-        <MyModal /> (does not work yet)
+        <MyModal />
       </div>
     </div>
   )
